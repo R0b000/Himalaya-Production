@@ -14,13 +14,9 @@ if (process.env.NODE_ENV === 'production') {
     console.log('🧑‍💻 Running in development mode');
 }
 
+const PORT = process.env.PORT || 8001;
 const httpServer = http.createServer(app);
 
-const PORT = 8000;
-const URL = '0.0.0.0' | '127.0.0.1'
-
-httpServer.listen(PORT, URL, (error) => {
-    if (!error) {
-        console.log(`http://${URL}:${PORT}`)
-    }
-})
+httpServer.listen(PORT, () => {
+    console.log(`Server running on port ${PORT}`);
+});

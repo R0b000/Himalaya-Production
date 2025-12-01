@@ -3,8 +3,9 @@ const cors = require('cors')
 const helmet = require('helmet')
 const { rateLimit } = require('express-rate-limit')
 const route = require('./router.config');
-const app = express();
 require('./mongoose.config')
+
+const app = express();
 
 const allowedUrl = [
     'http://localhost:5173',

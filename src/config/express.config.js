@@ -9,6 +9,7 @@ const app = express();
 
 const allowedUrl = [
     'http://localhost:5173',
+    'http://localhost:4173',
     'https://himalayaproduction.free.nf/'
 ]
 

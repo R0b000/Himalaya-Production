@@ -22,7 +22,11 @@ app.use(cors({
     }
 }))
 
-app.use(helmet())
+app.use(
+  helmet({
+    contentSecurityPolicy: false
+  })
+);
 
 const limiter = rateLimit({
     windowMs: 15 * 60 * 1000,

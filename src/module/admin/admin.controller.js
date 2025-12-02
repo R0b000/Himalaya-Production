@@ -6,7 +6,8 @@ const { randomNumberGeneration } = require("../../services/helper");
 
 class AdminController {
     loginAdmin = async (req, res, next) => {
-        try {
+        try {'
+            console.log('check:', req.body);
             const { email, password } = req.body;
 
             // Step 1: Check if user exists
@@ -144,6 +145,7 @@ class AdminController {
 
     listUserData = async (req, res, next) => {
         try {
+            console.log('check: I am at listing.')
             const {imageData, videoData} = await adminSvc.listData();
 
             res.json({

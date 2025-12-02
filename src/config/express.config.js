@@ -23,12 +23,12 @@ app.use(cors({
     credentials: true
 }))
 
-app.use(
-  helmet({
-    contentSecurityPolicy: false,
-    crossOriginResourcePolicy: false,
-  })
-);
+// app.use(
+//   helmet({
+//     contentSecurityPolicy: false,
+//     crossOriginResourcePolicy: false,
+//   })
+// );
 
 const limiter = rateLimit({
     windowMs: 15 * 60 * 1000,

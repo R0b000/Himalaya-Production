@@ -10,7 +10,7 @@ const app = express();
 const allowedUrl = [
     'http://localhost:5173',
     'http://localhost:4173',
-    'https://himalayaproduction.free.nf/'
+    'https://himalayaproduction.free.nf'
 ]
 
 app.use(cors({

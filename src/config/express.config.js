@@ -19,14 +19,11 @@ app.use(cors({
             return callback(null, true);
         }
         return callback(new Error("Not allowed by CORS"))
-    }
+    },
+    credentials: true
 }))
 
-app.use(
-  helmet({
-    contentSecurityPolicy: false
-  })
-);
+app.use(helmet());
 
 const limiter = rateLimit({
     windowMs: 15 * 60 * 1000,

@@ -6,7 +6,7 @@ const { randomNumberGeneration } = require("../../services/helper");
 
 class AdminController {
     loginAdmin = async (req, res, next) => {
-        try {'
+        try {
             console.log('check:', req.body);
             const { email, password } = req.body;
 
